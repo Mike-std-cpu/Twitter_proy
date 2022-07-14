@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Mike-std-cpu/Twitter_proy/issues"
   },
-  "homepage": "https://github.com/Mike-std-cpu/Twitter_proy#readme"
+  "homepage": "https://github.com/Mike-std-cpu/Twitter_proy#readme",
+  "devDependencies": {
+    "jest": "^28.1.3"
+  }
 }
