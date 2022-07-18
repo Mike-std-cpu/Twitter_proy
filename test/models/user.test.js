@@ -9,4 +9,14 @@ describe("Prueba de JEST clase USER twitter", () =>{
         expect(user1._name).toBe('Miguel Andrade');
         expect(user1._bio).toBe('My bio');
     })
+
+    test("Prueba 2 de introduccion de pruebas de user Twitter: ", () => {
+        const user = new User(1,'mikelolp','Miguel Andrade','My bio');
+        expect(user._dataCreated).not.toBeUndefined();// para que no mande un valor indefinido
+        expect(user._lastUpdated).not.toBeUndefined();
+        expect(user._id).toBe(1);
+        expect(user._user).toBe('mikelolp');
+        expect(user._name).toBe('Miguel Andrade');
+        expect(user._bio).toBe('My bio');
+    })
 })
