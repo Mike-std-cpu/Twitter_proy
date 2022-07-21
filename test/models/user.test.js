@@ -19,4 +19,11 @@ describe("Prueba de JEST clase USER twitter", () =>{
         expect(user._name).toBe('Miguel Andrade');
         expect(user._bio).toBe('My bio');
     })
+
+    test("Prueba 3 de getters y setters de clase user: ", () =>{
+        const user = new User(1,'Mikelolp','Miguel Andrade','My bio'); 
+        expect(user.getUser).toBe("Mikelolp");
+        user.setBio = "New Bio";
+        expect(user.getBio).toBe("New Bio");
+    })
 })
