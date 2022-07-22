@@ -14,7 +14,7 @@ class UserServices{
     }
 
     static getInfo(user){
-        return Object.values(user);//Retornara los valores del objeto.
+        return Object.values(user);//Object.values retornara un array con los valores correspondientes enumerables de un objeto
     }
     static updateUserUserName(user,yourUserName){
         user.setUsername = yourUserName;
