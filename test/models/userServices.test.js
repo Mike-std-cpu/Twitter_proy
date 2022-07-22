@@ -17,4 +17,10 @@ describe("Pruebas de UserServices", () =>{
         expect(userInfoArray[2]).toBe("Miguel")
 
     })
+
+    test("Prueba 3: Actualziar userName." ,() => {
+        const user = UserServices.create(101,"Mikelolp", "Mike");
+        UserServices.updateUser(user, "olddirty");
+        expect(user.getUser).toBe("olddirty");
+    })
 })

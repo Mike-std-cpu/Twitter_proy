@@ -22,7 +22,7 @@ class User {
 
 
     set setUser(newUser){
-        this._user = newuser;
+        this._user = newUser;
     }
     set setName(newName){
         this._name = newName;
