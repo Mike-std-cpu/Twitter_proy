@@ -23,4 +23,17 @@ describe("Pruebas de UserServices", () =>{
         UserServices.updateUser(user, "olddirty");
         expect(user.getUser).toBe("olddirty");
     })
+
+    test("Prueba 4: Lista de users cin nombres y userNames", () => {
+        const UserMike = UserServices.create(7,"mikelolp", "Miguel");
+        const UserCarlo = UserServices.create(5,"CarloGm","Carlo");
+        const UserKarina = UserServices.create(1,"mksgn","Karian");
+
+        const Users = [UserMike, UserCarlo, UserKarina];
+        const showNames = UserServices.getAllUsernames(Users);
+        //const showNames = UserServices.getAllUsernames([UserMike, UserCarlo, UserKarina]);
+        expect(showNames).toContain("mikelolp");
+        expect(showNames).toContain("CarloGm");
+
+    })
 })

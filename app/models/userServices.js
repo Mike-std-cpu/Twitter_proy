@@ -20,9 +20,10 @@ class UserServices{
         user.setUser = newUser;
     }
     static getAllUsernames(users){
-        const usersUsernames = users.map( user => user._username)
+        const usersUsernames = users.map( user => user._user)
         return usersUsernames
       }
+      // map = creates a new array from calling a function for every array element.
 }
 
 
