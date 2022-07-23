@@ -14,12 +14,15 @@ class View{
         if(payload === null){
             console.log("Erro es un null");
             return {error: "El payload no existe"}
-        }else if(typeof payload._user === 'string' && typeof payload._name === 'string' && typeof payload._id === 'number'){//2 & 3
-            return UserServices.create(payload._id, payload._user,payload._name);
+        }else if(typeof payload.id === 'number' && typeof payload.userName === 'string' && typeof payload.name === 'string'){//2 & 3
+            return UserServices.create(payload.id, payload.userName, payload.name);
         }else{
             return {error: "El payload necesita tener valores validos"}
         }
+
+        
     }
+    
 }
 
 module.exports = View;
