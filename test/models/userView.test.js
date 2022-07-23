@@ -12,12 +12,21 @@ describe ("Pruebas de Vistas de proyecto Twitter: ", () =>{
     })
 
     test("Prueba 2: Retorno de un objeto 'error' cuando payload no tenga valores correctos", () =>{
-        //const payload = {user: null, name: 12, id:"id"}
-        const payload = {user:'MikeDirrty', name: 'Miguel', id: 100}
+        const payload = {user: null, name: 12, id:"id"}
         const result = UserView.createUser(payload);
         //expect(result.error).toMatch(/El payload necesita tener valores validos/);
-        expect(result.error).not.toBeUndefined();
-        expect(payload.name).toContain("Miguel")
         expect(result.error).toMatch(/El payload necesita tener valores validos/)
+     })
+
+     test("Prueba 3: Retornar obejto de error cuando falten propiedades en al crear un objeto. ", () => {
+        const payload = {user:'MikeDirrty'};
+        const result = UserView.createUser(payload);    
+        expect(result.error).toMatch(/El payload necesita tener valores validos/)
+     })
+
+     test("Prueba 4: Validar que todo este correcto." ,() =>{
+        const payload = {user:'MikeDirrty', name: 'Miguel', id: 100}
+        const result = UserView.createUser(payload);
+        expect(result).not.toBeUndefined();
      })
 })
